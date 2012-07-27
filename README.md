@@ -44,5 +44,31 @@ this:
        -DarchetypeVersion=6.1.0 \
        -DinteractiveMode=false
 
+If you want to be able to invoke
+
+    $ mvn liferay:deploy
+
+add a custom liferay.auto.deploy.dir property in your ~/.m2/settings.xml,
+like this:
+
+    <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          http://maven.apache.org/xsd/settings-1.0.0.xsd">
+        <profiles>
+            <profile>
+                <id>liferay</id>
+                <activation>
+                    <activeByDefault>true</activeByDefault>
+                </activation>
+                <properties>
+                    <liferay.auto.deploy.dir>/home/mcaserta/liferay/deploy</liferay.auto.deploy.dir>
+                </properties>
+            </profile>
+        </profiles>
+    </settings>
+
+
 [Liferay Maven SDK]: http://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.0%20GA1/liferay-portal-maven-6.1.0-ce-ga1-20120106155615760.zip/download
 [blog entry]: http://www.liferay.com/web/mika.koivisto/blog/-/blogs/12034718
+
