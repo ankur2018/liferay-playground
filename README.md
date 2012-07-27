@@ -1,13 +1,13 @@
 Liferay Playground
 ==================
 
-A couple very basic Liferay Plugin examples generated with the Liferay Maven
-Archetypes.
+A couple very basic Liferay Plugin examples generated with the Liferay
+Maven Archetypes.
 
-You don't need to install the Liferay Maven SDK if you only need to build and
-deploy the examples. Maven is enough for that. The SDK is only needed to
-create the basic skeleton for your own portlets, hooks, etc by running the
-archetype:generate goal.
+You don't need to install the Liferay Maven SDK if you only need to
+build and deploy the examples. Maven is enough for that. The SDK is
+only needed to create the basic skeleton for your own portlets, hooks,
+etc by running the archetype:generate goal.
 
 ## Prerequisites
 
@@ -17,8 +17,8 @@ archetype:generate goal.
 
 ## Installing the Liferay Maven SDK
 
-Download the [Liferay Maven SDK]. I found the download link in this [blog
-entry].
+Download the [Liferay Maven SDK]. I found the download link in this
+[blog entry].
 
     $ unzip liferay-portal-maven-6.1.0-ce-ga1-20120106155615760.zip
     $ cd liferay-portal-maven-6.1.0
@@ -28,12 +28,21 @@ Now you can use:
 
     $ mvn archetype:generate -Dfilter=com.liferay:liferay
 
-This will give you a list of Liferay Maven Archetypes to choose from and
-further prompts will guide you through the necessary steps.
+This will give you a list of Liferay Maven Archetypes to choose from
+and further prompts will guide you through the necessary steps.
 
-Or you can enter all required parameters from the command line like this:
+Or you can enter all required parameters from the command line like
+this:
 
-    $ mvn archetype:generate # TODO: fixme
+    $ mvn archetype:generate \
+       -DgroupId=com.nexse.swat.liferay.examples \
+       -DartifactId=portlet-example \
+       -Dversion=1.0.0-SNAPSHOT \
+       -DpackageName=com.nexse.swat.liferay.examples.portlet.example \
+       -DarchetypeGroupId=com.liferay.maven.archetypes \
+       -DarchetypeArtifactId=liferay-portlet-archetype \
+       -DarchetypeVersion=6.1.0 \
+       -DinteractiveMode=false
 
 [Liferay Maven SDK]: http://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.0%20GA1/liferay-portal-maven-6.1.0-ce-ga1-20120106155615760.zip/download
 [blog entry]: http://www.liferay.com/web/mika.koivisto/blog/-/blogs/12034718
