@@ -34,6 +34,7 @@ and further prompts will guide you through the necessary steps.
 Or you can enter all required parameters from the command line like
 this:
 
+    $ # for a portlet use:
     $ mvn archetype:generate \
        -DgroupId=com.nexse.swat.liferay.examples \
        -DartifactId=portlet-example \
@@ -43,6 +44,19 @@ this:
        -DarchetypeArtifactId=liferay-portlet-archetype \
        -DarchetypeVersion=6.1.0 \
        -DinteractiveMode=false
+    $ # for an hook use:
+    $ mvn archetype:generate \
+       -DgroupId=com.nexse.swat.liferay.examples \
+       -DartifactId=hook-example \
+       -Dversion=1.0.0-SNAPSHOT \
+       -DpackageName=com.nexse.swat.liferay.examples.hook.example \
+       -DarchetypeGroupId=com.liferay.maven.archetypes \
+       -DarchetypeArtifactId=liferay-hook-archetype \
+       -DarchetypeVersion=6.1.0 \
+       -DinteractiveMode=false
+
+
+## Deploying to Liferay
 
 If you want to be able to invoke
 
