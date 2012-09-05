@@ -17,11 +17,10 @@ etc by running the archetype:generate goal.
 
 ## Installing the Liferay Maven SDK
 
-Download the [Liferay Maven SDK]. I found the download link in this
-[blog entry].
+Download the [Liferay Maven SDK].
 
-    $ unzip liferay-portal-maven-6.1.0-ce-ga1-20120106155615760.zip
-    $ cd liferay-portal-maven-6.1.0
+    $ unzip liferay-portal-maven-6.1.1-ce-ga2-20120731132656558.zip
+    $ cd liferay-portal-maven-6.1.1
     $ ant install
 
 Now you can use:
@@ -42,7 +41,7 @@ this:
        -DpackageName=com.nexse.swat.liferay.examples.portlet.example \
        -DarchetypeGroupId=com.liferay.maven.archetypes \
        -DarchetypeArtifactId=liferay-portlet-archetype \
-       -DarchetypeVersion=6.1.0 \
+       -DarchetypeVersion=6.1.1 \
        -DinteractiveMode=false
     $ # for an hook use:
     $ mvn archetype:generate \
@@ -52,7 +51,7 @@ this:
        -DpackageName=com.nexse.swat.liferay.examples.hook.example \
        -DarchetypeGroupId=com.liferay.maven.archetypes \
        -DarchetypeArtifactId=liferay-hook-archetype \
-       -DarchetypeVersion=6.1.0 \
+       -DarchetypeVersion=6.1.1 \
        -DinteractiveMode=false
 
 
@@ -83,6 +82,4 @@ like this:
     </settings>
 
 
-[Liferay Maven SDK]: http://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.0%20GA1/liferay-portal-maven-6.1.0-ce-ga1-20120106155615760.zip/download
-[blog entry]: http://www.liferay.com/web/mika.koivisto/blog/-/blogs/12034718
-
+[Liferay Maven SDK]: http://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.1%20GA2/liferay-portal-maven-6.1.1-ce-ga2-20120731132656558.zip/download
