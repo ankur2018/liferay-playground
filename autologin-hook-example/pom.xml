@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.nexse.swat.liferay.examples</groupId>
-    <artifactId>hook-example</artifactId>
+    <artifactId>autologin-hook-example</artifactId>
     <packaging>war</packaging>
-    <name>Nexse SWAT Team - Liferay Playground - Hook Example</name>
+    <name>Nexse SWAT Team - Liferay Playground - Autologin Hook Example</name>
     <build>
         <plugins>
             <plugin>
