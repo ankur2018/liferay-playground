@@ -4,7 +4,7 @@ import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
-import com.liferay.portal.kernel.util.Validator;
+import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.model.User;
 import com.liferay.portal.security.auth.AutoLogin;
 import com.liferay.portal.security.auth.AutoLoginException;
@@ -28,14 +28,14 @@ public class AutoLoginExample implements AutoLogin {
 
         User user = null;
 
-        if (Validator.isNull(userScreenName)) {
+        if (null == userScreenName || StringPool.BLANK.equals(userScreenName.trim())) {
             return null; // login failed
         }
 
         try {
             user = UserLocalServiceUtil.getUserByScreenName(
                     PortalUtil.getCompanyId(request), userScreenName);
-            log.info("login(): user.fullName=" + user.getFullName());
+            log.info("login(): user=" + user);
         } catch (PortalException e) {
             log.error(e);
         } catch (SystemException e) {
